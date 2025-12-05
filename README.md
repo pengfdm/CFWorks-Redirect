@@ -46,6 +46,7 @@ no.aaa.com/**openwrt**/abc=====>http//:**openwrt**.bbb.com:1234/abc
 ### 以后访问的固定域名为（域名必须带头部和path）：
 
 tls访问：**tls头域名+path地址。=====&gt;** https//:**path地址**.bbb.com:tls端口
+
 notls访问：no**头域名+path地址。=====&gt;** http//:**path地址**.bbb.com:notls端口
 
 ‍
