@@ -6,13 +6,11 @@
 
 https:/tls.aaa.com/openwrt=======>访问路由器
 
-https://tls.aaa.com/nas=======>访问群晖
+https:/tls.aaa.com/nas=======>访问群晖
 
-https://tls.aaa.com/debian=======>访问debian后台
+https:/tls.aaa.com/lucky=======>访问lucky
 
-https://tls.aaa.com/lucky=======>访问lucky
-
-### 缺点
+https:/tls.aaa.com/openwrt=======>访问路由器
 
 对于不支持重定向的软件，无法使用，前置的固定域名，ip是指向CFWorks。建议frp。
 
@@ -36,7 +34,7 @@ https://tls.aaa.com/lucky=======>访问lucky
 
 举例：如stun端口为1234
 
-tls.aaa.com/**akk**=====>https//:**ak**k.bbb.com:1234
+ tls.aaa.com/**akk**=====>https//:**ak**k.bbb.com:1234
 
 no.aaa.com/**openwrt**/abc=====>http//:**openwrt**.bbb.com:1234/abc
 
@@ -48,7 +46,9 @@ tls.aaa.com/**nas**/stage/build/desk=====>https//:**nas**.bbb.com:1234/stage/bui
 
 1.NPM做好前置代理，配置好访问域名，强烈建议申请泛域名的证书，解决tls访问。
 
-2.lucky插件做好**域名B**的ipv4，stun用webhook做好（ip+端口，**必须是ip+端口**）的txt解析，（PS：以前的一直用ip+端口，不愿意改了）
+2.lucky插件做好**域名B**的ipv4，stun用webhook做好（ip+端口，**必须是ip+端口**）的txt解析，
+
+（PS：以前的一直用ip+端口，不愿意改了）
 
 3.CF新建works==>从hello开始==>拷贝项目CFWorks-Redirect.js（复制全部代码粘贴），部署。
 
