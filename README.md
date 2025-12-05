@@ -1,8 +1,12 @@
 # CFWorks-Redirect
 
 # 通过CFWorks用固定域名加path的形式，访问内网stun直连。
-### 效果：浏览器固定域名来访问直连。
-https:/tls.aaa.com/openwrt=======>访问路由器
+### 效果：浏览器固定域名来访问直连。（域名必须带头部和path，自动转换至直连）：
+
+tls访问：**tls头域名+path地址。=====&gt;** https//:**path地址**.bbb.com:tls端口
+
+notls访问：no**头域名+path地址。=====&gt;** http//:**path地址**.bbb.com:notls端口
+
 
 对于不支持重定向的软件，无法使用，这种建议frp中转。
 
@@ -11,7 +15,9 @@ https:/tls.aaa.com/openwrt=======>访问路由器
 ### 前置条件
 
 1.CF账号及托管在CF域名，B域名（以下用bbb.com）用**泛域名**方式解析到内网的公网ip，A域名用来访问CFWorks（以下用aaa.com），C域名和D域名（以下用ccc.com）用来更新stun端口TXT解析，一个tls一个非tls。
+
 2.内网安装lucky插件或者能打洞的任何工具都行，支持域名更新，支持打洞状态更新CF的TXT解析即可。
+
 3.内网安装反向（前置）代理（本人用的NPM），配置好需要暴露的网页服务即可。
 
 ---
